@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -22,14 +23,59 @@
         </div>
     </div>
     <div id="form-container">
-        <div id="info-container">
+        <p id="info-container">
             This is not a real online service! You know you need something<br>
             like this in your life to help you realize your deepest dreams.<br>
             Sign up <i>now</i> to get started.
-        </div>
-        <div>
+        </p>
+        <p>
             You <i>know</i> you want to.
-        </div>
+        </p>
+        <form action="https://formsubmit.co" method="post" id="signUp">
+            <div id="form-inputs">
+                <h1>Let's do this!</h1>
+                <fieldset form="signUp">
+                    <div id="first-name-container">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name" autocomplete="on" minlength="1"
+                            pattern="^[A-Z][a-zA-Z]*$" required />
+                    </div>
+                    <div id="last-name-container">
+                        <label for="first-name">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name" autocomplete="on" minlength="1"
+                            pattern="^[A-Z][a-zA-Z]*$" required />
+                    </div>
+                </fieldset>
+                <fieldset form="signUp">
+                    <div id="contacts-container">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" autocomplete="on" />
+                    </div>
+                    <div id="phone-number-container">
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="tel" id="phone-number" name="phone-number" autocomplete="on" pattern="^[0-9]+$" />
+                    </div>
+                </fieldset>
+                <fieldset form="signUp">
+                    <div id="password-container">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" autocomplete="off" minlength="8"
+                            required />
+                    </div>
+                    <div id="confirm-password-container">
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm-password" name="confirm-password" autocomplete="off"
+                            minlength="8" required />
+                    </div>
+                </fieldset>
+            </div>
+            <div id="button-container" form="signUp" name="signUpButton">
+                <button type="submit" id="submitBtn">Create Account</button>
+            </div>
+            <div id="login-container">
+                <p>Already have an account? <a href="#">Log In</a></p>
+            </div>
+        </form>
     </div>
 </body>
 

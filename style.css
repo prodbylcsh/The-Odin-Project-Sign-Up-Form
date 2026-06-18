@@ -32,6 +32,11 @@ body>* {
     height: 100%;
 }
 
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
 #image-container {
     width: 28%;
     position: relative;
@@ -86,13 +91,95 @@ body>* {
     width: 72%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background: rgb(241, 241, 241);
 }
 
-#form-container>* {
-    margin: 25px;
+#form-container>p {
+    margin: 10px 40px;
+}
+
+#form-container>p:nth-child(2) {
+    margin-bottom: 3rem;
+}
+
+#form-inputs {
+    background: white;
+    padding: 35px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0px 17px 25px -15px black;
 }
 
 #info-container,
-#info-container+div {
+#info-container+p {
     font-weight: bold;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    gap: 5rem;
+    padding: 0;
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+}
+
+#button-container {
+    margin: 35px 40px;
+}
+
+#login-container {
+    margin-left: 35px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link {
+    color: green;
+}
+
+label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(24, 24, 24);
+    font-size: 1rem;
+}
+
+input[type] {
+    border: 1px solid black;
+    border-radius: 3px;
+    line-height: 1.5rem;
+}
+
+input[type]:invalid:not(:focus):not(:focus-visible) {
+    border: 1px solid red;
+}
+
+input[type]:focus,
+input[type]:focus-visible {
+    border: 1px solid blue;
+    outline: none;
+    box-shadow: 5px 5px 0px 0px black;
+}
+
+button {
+    background: rgb(65, 116, 65);
+    color: white;
+    padding: 15px 35px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 15px 0 rgb(218, 218, 218);
+}
+
+button:hover {
+    cursor: pointer;
 }
